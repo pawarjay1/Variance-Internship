@@ -108,3 +108,10 @@ submitBtn.addEventListener("click", () => {
 });
 
 
+//localstorage implementation 
+
+// next and preview option 
+
+
+
+
