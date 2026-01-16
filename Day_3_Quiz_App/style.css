@@ -1,5 +1,71 @@
-*{
-    padding: 0px; 
-    margin: 0px; 
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap');
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+.quiz-container {
+  background: white;
+  width: 400px;
+  padding: 90px;
+  border-radius: 7px;
+}
+
+#heading {
+  position: absolute; 
+  top: 120px; 
+}
+
+ul {
+  list-style: none; 
+}
+
+#submit {
+  border: 1px solid #007BFF; 
+  background-color: #007BFF; 
+  padding: 8px; 
+  color: white; 
+  border-radius: 7px; 
+}
+
+.restart-btn {
+  border: 1px solid #4CAF50; 
+  background-color: #4CAF50; 
+  padding: 8px; 
+  color: white; 
+  border-radius: 7px; 
+}
+
+input[type="radio"] {
+  transform: scale(1.0);
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* home page style  */
+
+
+.averia-gruesa-libre-regular {
+  font-family: "Averia Gruesa Libre", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.start-btn {
+  margin-left: 155px; 
+  background-color: #ae2be2;
+  border: 1px solid #ae2be2; 
+  padding: 8px; 
+  color: white; 
+  border-radius: 7px;
+}
