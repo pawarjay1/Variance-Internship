@@ -18,3 +18,7 @@ deselectAnswers()
 getSelected()
 
 event listener on button click : it will check the correct answer if yes then increase the score else decrese score
+
+
+
+

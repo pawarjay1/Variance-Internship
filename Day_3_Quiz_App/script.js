@@ -56,7 +56,7 @@ let score = 0;
 loadQuiz();
 
 function loadQuiz() {
-  deselectAnswers();
+  deselectAnswers();   
 
   const currentQuizData = quizData[currentQuiz];
   questionEl.innerText = currentQuizData.question;
@@ -64,12 +64,15 @@ function loadQuiz() {
   b_text.innerText = currentQuizData.b;
   c_text.innerText = currentQuizData.c;
   d_text.innerText = currentQuizData.d;
+
+  // console.log("----> ",typeof(currentQuizData)); 
 }
 
 function deselectAnswers() {
-  answerEls.forEach(answer => (answer.checked = false));
+  answerEls.forEach(answer => (answer.checked = false));  //deselect the radio button 
 }
 
+// store the value of answerEls into answer
 function getSelected() {
   let answer;
   answerEls.forEach(answerEl => {
@@ -83,11 +86,11 @@ function getSelected() {
 submitBtn.addEventListener("click", () => {
   const answer = getSelected();
 
+  console.log(answer); 
+
   if (answer) {
     if (answer === quizData[currentQuiz].correct) {
       score++;
-    }else{
-      score--; 
     }
 
     currentQuiz++;
@@ -96,9 +99,11 @@ submitBtn.addEventListener("click", () => {
       loadQuiz();
     } else {
       quiz.innerHTML = `
-        <h2>You scored ${score} out of ${quizData.length}</h2>
+        <h2>You scored ${score} out of ${quizData.length} and you'r ${score<3 ? "failed try again :(" : "passed :)"} </h2>
         <button onclick="location.reload()" class="restart-btn">Restart Quiz</button>
       `;
     }
   }
 });
+
+
