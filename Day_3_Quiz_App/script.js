@@ -53,6 +53,7 @@ const submitBtn = document.getElementById("submit");
 let currentQuiz = 0;
 let score = 0;
 
+//intialquize loading 
 loadQuiz();
 
 function loadQuiz() {
