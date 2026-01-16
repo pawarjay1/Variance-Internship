@@ -1,0 +1,143 @@
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --danger: #ef4444;
+    --success: #22c55e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+.todo-card {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Styling */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+#todoInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#todoInput:focus {
+    border-color: var(--primary);
+}
+
+#addBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#addBtn:hover {
+    background: var(--primary-hover);
+}
+
+/* List Item Styling */
+#todoList {
+    list-style: none;
+}
+
+#todoList li {
+    background: white;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.1s;
+}
+
+#todoList li:last-child {
+    border-bottom: none;
+}
+
+/* Custom Checkbox */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+#todoList span {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+/* Action Buttons */
+.actions button {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 5px;
+    background: #f1f5f9;
+    color: var(--text-main);
+    transition: 0.2s;
+}
+
+.actions button:hover {
+    background: #e2e8f0;
+}
+
+.actions button:last-child:hover {
+    background: #fee2e2;
+    color: var(--danger);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .todo-card {
+        margin: 10px;
+        padding: 1.5rem;
+    }
+}
